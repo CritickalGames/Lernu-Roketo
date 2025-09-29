@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>04 Estructuras Oraciones on LernuRoketo</title>
-    <link>https://critickalgames.github.io/Lernu-Roketo/idiomas/japones/04-estructuras-oraciones/</link>
+    <link>/idiomas/japones/04-estructuras-oraciones/</link>
     <description>Recent content in 04 Estructuras Oraciones on LernuRoketo</description>
     <generator>Hugo</generator>
     <language>es</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://critickalgames.github.io/Lernu-Roketo/idiomas/japones/04-estructuras-oraciones/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/idiomas/japones/04-estructuras-oraciones/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
