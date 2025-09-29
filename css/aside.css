@@ -1,0 +1,45 @@
+aside {
+  background: linear-gradient(var(--fondo-pagina));
+  color: var(--texto);;
+  padding: 1.3rem;
+  border-radius: 10px;
+  border: 2px solid var(--borde);
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
+}
+
+aside h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--moho);
+}
+
+/** Sangría*/
+.lesson-index li > ul {
+  padding-left: 1rem;
+}
+
+/** Enlaces */
+.lesson-index a {
+  text-decoration: none;
+  color: var(--texto);
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  display: block;
+}
+
+.lesson-index a:hover {
+  background: var(--sombra);
+}
+
+/** Elementos activos */
+.lesson-index li.active > a {
+  font-weight: bold;
+  color: var(--moho);
+}
+
+.lesson-index li.active > ul li.active > a {
+  color: var(--moho);
+  text-decoration: underline;
+}

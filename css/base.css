@@ -1,0 +1,30 @@
+:root {
+  --piedra: #bdbdbdf8;
+  --borde: #e2e8f0;
+  --moho: #095758;
+  --tierra: #ac7348;
+  --tierra-2: #5f4029;
+  --hierba: #3a5e20;
+  --texto: #2d3748;
+  --aside-bg: #f8f9fa;
+  --sombra: #8F84D6;
+  --fondo: #8dd0f7;
+  --fondo-degradado: #39d15a;
+  --fondo-pagina: 135deg, var(--fondo) 10%, var(--fondo-degradado) 99%;
+  --fondo-main: 135deg, var(--fondo-degradado) 10%, var(--fondo) 99%;
+  --fondo-carrera: #16752e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(var(--fondo-pagina));
+  line-height: 1.6;
+  padding: 20px;
+  min-height: 100vh;
+}

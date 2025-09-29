@@ -1,0 +1,17 @@
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: #6b7280;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--piedra);
+  z-index: 2;
+  position: relative;
+}
+
+.cita {
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: var(--moho);
+}

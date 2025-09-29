@@ -1,0 +1,80 @@
+header {
+  text-align: center;
+  padding: 10px 100px;
+  position: relative;
+  z-index: 2;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  background: var(--claro);
+  border-bottom: 1px solid var(--piedra);
+}
+
+.logo-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--moho);
+  transition: all 0.3s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.05);
+}
+
+.logo {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.logo-chino {
+  font-size: 1.2rem;
+  color: var(--tierra);
+  margin-top: 5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--texto);
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background: var(--sombra);
+  color: var(--moho);
+}
+
+/* En dispositivos móviles, los enlaces se apilan */
+@media (max-width: 768px) {
+  .header-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .nav-links {
+    margin-top: 15px;
+  }
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: var(--moho);
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}

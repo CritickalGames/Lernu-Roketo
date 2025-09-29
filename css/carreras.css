@@ -1,0 +1,204 @@
+.titulo-seccion {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 0px 0 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.titulo-seccion::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--moho);
+  border-radius: 3px;
+}
+
+.carreras-contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+  z-index: 2;
+  position: relative;
+}
+
+.carrera-tarjeta {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px var(--sombra);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.carrera-tarjeta:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px var(--sombra);
+}
+
+.carrera-imagen {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carrera-imagen::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, var(--fondo-carrera) 10%, #42d346 99%);
+  z-index: 1;
+}
+
+.camino-contenedor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.camino {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+path {
+  fill: none;
+  stroke-width: 20;
+  stroke-linecap: round;
+}
+@keyframes caminar {
+      0% {
+        transform: translateX(-50%) translateY(0);
+        animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+      }
+      50% {
+        transform: translateX(-50%) translateY(-10px);
+        animation-timing-function: cubic-bezier(0.75, 0.05, 0.8, 0.05);
+      }
+      100% {
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+
+
+.carrera-tarjeta:hover .piedra{
+  animation: caminar 1.5s ease-in-out infinite;
+  transition: transform 0.3s;
+}
+.piedra {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 80px;
+  background: linear-gradient(215deg, #76b14c 10%, var(--piedra) 65%);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.piedra::after {
+  content: "小石";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.piedra::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%) rotate(15deg);
+  width: 45px;
+  height: 25px;
+  background: linear-gradient(to bottom, #76b14c 5%, #c1c2c1 70%);
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.carrera-contenido {
+  padding: 30px 25px 25px;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+.carrera-titulo {
+  font-size: 1.5rem;
+  color: var(--moho);
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.cursos-etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+  justify-content: center;
+}
+.bandera-idioma {
+  width: 24px;
+  height: 18px;
+  vertical-align: middle;
+  border-radius: 2px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.curso-etiqueta {
+  background: rgb(141, 160, 243);
+  border-radius: 12px;
+  padding: 5px 12px;
+  font-size: 0.85rem;
+  color: var(--texto);
+}
+
+.carrera-ruta {
+  display: inline-block;
+  padding: 8px 15px;
+  background: white;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  color: var(--texto);
+  border: 1px solid #d1d5db;
+}
