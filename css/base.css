@@ -13,7 +13,12 @@
   --fondo-pagina: 135deg, var(--fondo) 10%, var(--fondo-degradado) 99%;
   --fondo-main: 135deg, var(--fondo-degradado) 10%, var(--fondo) 99%;
   --fondo-carrera: #16752e;
+  --papiro-fondo: #fdf6e3; /* Beige claro tipo pergamino */
+  --papiro-borde: #d8caa8; /* Borde envejecido */
+  --papiro-sombra: rgba(0, 0, 0, 0.1); /* Sombra interna suave */
+  --papiro-textura: url('/img/textura-papiro.png'); /* Imagen de fondo opcional */
 }
+
 
 * {
   margin: 0;

@@ -1,0 +1,88 @@
+:root {
+  --color-enfasis:         #d32f2f; /* Rojo oscuro enfático */
+
+  /* 01–03: Solo color */
+  --color-pronombre:       #aa0080; /* Magenta profundo */
+  --color-verbo:           #6a1b9a; /* Púrpura intenso */
+  --color-adjetivo:        #c2185b; /* Rosa oscuro contrastivo */
+
+  /* 04–06: Solo fondo */
+  --fondo-sustantivo:      #fbe9e7; /* Fondo coral claro */
+  --fondo-articulo:        #e3f2fd; /* Fondo celeste pálido */
+  --fondo-adverbio:        #ede7f6; /* Fondo violeta claro */
+
+  /* 07–09: Color + fondo */
+  --color-preposicion:     #0077ff; /* Azul eléctrico puro */
+  --fondo-preposicion:     #e0f7fa; /* Fondo celeste claro */
+
+  --color-conjuncion:      #a52a2a; /* Rojo tierra */
+  --fondo-conjuncion:      rgba(138, 118, 255, 0.25); /* Fondo violeta claro */
+
+  --color-onomatopeya:     #ff1493; /* Rosa fuerte vibrante */
+  --fondo-onomatopeya:     #fff0f5; /* Fondo lavanda claro */
+}
+
+p { padding-bottom: 1rem; }
+
+/* Clases semánticas */
+.pronombre     { color: var(--color-pronombre); }
+.verbo         { color: var(--color-verbo); }
+.adjetivo      { color: var(--color-adjetivo); }
+
+.sustantivo    { background: var(--fondo-sustantivo); }
+.articulo      { background: var(--fondo-articulo); }
+.adverbio      { background: var(--fondo-adverbio); }
+
+.preposicion,
+.preposición,   /* Corregido: era preposición en lugar de preposicion */
+.particula     {
+  color: var(--color-preposicion);
+  background: var(--fondo-preposicion);
+}
+
+.conjuncion,
+.conjunción    {
+  color: var(--color-conjuncion);
+  background: var(--fondo-conjuncion);
+}
+
+.onomatopeya   {
+  color: var(--color-onomatopeya);
+  background: var(--fondo-onomatopeya);
+  font-style: italic;
+}
+
+.enfasis       {
+  color: var(--color-enfasis);
+  font-weight: bold;
+}
+
+/* Corrección para elementos en línea */
+.tooltip {
+  display: inline-block;
+  padding: 0 2px;
+  position: relative;
+}
+
+/* Furigana como tooltip visual */
+.tooltip[data-lectura]::after {
+  content: attr(data-lectura);
+  position: absolute;
+  top: -1.5em;
+  left: 0;
+  background: #fff;
+  color: #333; /* Fijo para legibilidad */
+  font-size: 0.75em;
+  padding: 2px 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 10;
+}
+
+.tooltip[data-lectura]:hover::after {
+  opacity: 1;
+}
